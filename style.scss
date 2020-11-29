@@ -1,0 +1,117 @@
+@mixin vertical-align($position) {
+    position:$position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+  
+@mixin all-transition($time) {
+    transition: all $time;
+    -webkit-transition: all $time;
+}
+body {
+    font-family: 'Handlee', cursive;
+    text-align: center;
+}
+h1 {
+    color: #ffa826;
+}
+h3 {
+    color: #e06704;
+}
+div > input {
+    border-radius: 5%;
+    padding: 15px 5px 10px 5px;
+    transition-duration: 400ms;
+}
+li > input {
+    width: 50px;
+}
+.inp {
+    border: 3px solid red;
+    &:hover {
+        background-color: red;
+        color: white;
+    }
+}
+.img-circle {
+    cursor: pointer;
+    border: 3px solid blue;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+}
+.rem,.remd,.comp {
+    margin-left: 10px;
+    background-color: white;
+    color: red;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+}
+.comp {
+    color: rgb(140, 226, 255);
+    &:disabled {
+        color: greenyellow;
+    }
+}
+.date {
+    margin-left: 20px;
+    font-style: normal;
+}
+.menu {
+    font-weight: 100;
+    background: #efefef;
+    width: 150px;
+    height: 100%;
+    padding-right: 50px;
+    position: fixed;
+    z-index: 100;
+    -webkit-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.2);
+    left: -130px;
+    @include all-transition(0.3s);
+    color: #222;
+    &:hover, &:focus {
+        transform: translate3d(130px, 0, 0);
+        animation-timing-function: 1s ease-in;
+    }
+    .title {
+        top:50%;
+        @include vertical-align(absolute);
+        transform: rotate(90deg);
+        right: 10px;
+        font-weight: 800;
+        font-size: 15px;
+    }
+    .nav {
+        @include vertical-align(absolute);
+        font-weight: 100;
+        li {
+            padding-bottom: 30px;
+            list-style-type: none;
+            button {
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                @include all-transition(0.3s);
+                &:hover {
+                    color: #aaa;
+                }
+                &:disabled {
+                    color: skyblue;
+                }
+                &:disabled:hover {
+                    color: lightskyblue;
+                }
+            }
+        }
+    }
+}
+.intro {
+    margin-left: 75px;
+	position: absolute;
+	text-align: center;
+}

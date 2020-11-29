@@ -1,0 +1,139 @@
+body {
+  font-family: 'Handlee', cursive;
+  text-align: center;
+}
+
+h1 {
+  color: #ffa826;
+}
+
+h3 {
+  color: #e06704;
+}
+
+div > input {
+  border-radius: 5%;
+  padding: 15px 5px 10px 5px;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+li > input {
+  width: 50px;
+}
+
+.inp {
+  border: 3px solid red;
+}
+
+.inp:hover {
+  background-color: red;
+  color: white;
+}
+
+.img-circle {
+  cursor: pointer;
+  border: 3px solid blue;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+}
+
+.rem, .remd, .comp {
+  margin-left: 10px;
+  background-color: white;
+  color: red;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+}
+
+.comp {
+  color: #8ce2ff;
+}
+
+.comp:disabled {
+  color: greenyellow;
+}
+
+.date {
+  margin-left: 20px;
+  font-style: normal;
+}
+
+.menu {
+  font-weight: 100;
+  background: #efefef;
+  width: 150px;
+  height: 100%;
+  padding-right: 50px;
+  position: fixed;
+  z-index: 100;
+  -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  left: -130px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  color: #222;
+}
+
+.menu:hover, .menu:focus {
+  -webkit-transform: translate3d(130px, 0, 0);
+          transform: translate3d(130px, 0, 0);
+  -webkit-animation-timing-function: 1s ease-in;
+          animation-timing-function: 1s ease-in;
+}
+
+.menu .title {
+  top: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  right: 10px;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.menu .nav {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-weight: 100;
+}
+
+.menu .nav li {
+  padding-bottom: 30px;
+  list-style-type: none;
+}
+
+.menu .nav li button {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.menu .nav li button:hover {
+  color: #aaa;
+}
+
+.menu .nav li button:disabled {
+  color: skyblue;
+}
+
+.menu .nav li button:disabled:hover {
+  color: lightskyblue;
+}
+
+.intro {
+  margin-left: 75px;
+  position: absolute;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

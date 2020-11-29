@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    </head>
+    <body>
+        <div id="main">
+            <div class="intro">
+                <h1>To-Do List</h1>
+                <div id="home" class="list">
+                    <h3>home <button class="remd">X</button></h3>
+                    <input class="inp" type="text" placeholder="New item"/>
+                    <img src="plus.png" class="img-circle add" alt="Add">
+                    <ol class="mylist"></ol>
+                    <p>Completed</p>
+                    <ol class="compl"></ol>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="title">MENU</div>
+                <ul class="nav" id="nav">
+                    <li><button class="item" name="home" disabled="true">home</button></li>
+                    <li id="l"><br></li>
+                    <li><input id="nn" class="last" placeholder="New List"></li>
+                    <li><button class="last">+</button></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
