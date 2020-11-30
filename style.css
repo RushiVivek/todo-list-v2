@@ -9,6 +9,11 @@ h1 {
 
 h3 {
   color: #e06704;
+  font-size: 25px;
+}
+
+h4 {
+  color: greenyellow;
 }
 
 div > input {
@@ -31,6 +36,16 @@ li > input {
   color: white;
 }
 
+.mylist li {
+  background-color: skyblue;
+  margin-top: 10px;
+}
+
+.compl li {
+  background-color: greenyellow;
+  margin-top: 10px;
+}
+
 .img-circle {
   cursor: pointer;
   border: 3px solid blue;
@@ -40,7 +55,24 @@ li > input {
   margin: auto;
 }
 
-.rem, .remd, .comp {
+.rem, .comp {
+  margin-left: 10px;
+  background-color: white;
+  color: red;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+}
+
+.mylist .rem {
+  background-color: skyblue;
+}
+
+.compl .rem {
+  background-color: greenyellow;
+}
+
+.remd {
   margin-left: 10px;
   background-color: white;
   color: red;
@@ -50,11 +82,13 @@ li > input {
 }
 
 .comp {
-  color: #8ce2ff;
+  background-color: skyblue;
+  color: limegreen;
 }
 
 .comp:disabled {
-  color: greenyellow;
+  background-color: greenyellow;
+  color: #006c00;
 }
 
 .date {
