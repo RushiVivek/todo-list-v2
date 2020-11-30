@@ -46,7 +46,7 @@ $(() => {
             $(elem).append("<input class='inp' type='text' placeholder='New item'/>");
             $(elem).append("<img src='plus.png' class='img-circle add' alt='Add'>");
             $(elem).append("<ol class='mylist'></ol>");
-            $(elem).append("<p>Completed</p>");
+            $(elem).append("<h4>Completed:</h4>");
             $(elem).append("<ol class='compl'></ol>")
             $(".intro").append(elem);
             $(".list").each(function() {
