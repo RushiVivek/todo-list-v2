@@ -12,14 +12,22 @@ $(() => {
             $(this).parent().parent().next().next().append($(this).parent());
             reload();
         });
+        ed();
         rep();
     }
     $(".add").on("click", function() {
         var val = $(this).prev().val();
         if(val !== '') {
-            var nval = "-".repeat((50 - val.length)/2.5) + val + "-".repeat((50 - val.length)/2.5);
+            if(val.length <= 50){
+                var nval = "-".repeat((50 - val.length)/2.5) + val + "-".repeat((50 - val.length)/2.5);
+            }
+            else{
+                var nval = val;
+            }
             var d = new Date();
-            var elem = $("<li></li>").text(nval);
+            var k = $("<p style='display:inline;'></p>").text(nval);
+            var elem = $("<li></li>");
+            $(elem).append(k);
             var date = $("<i class='date'></i>").text(d);
             $(elem).append(date);
             $(elem).append("<button class='comp'>✓</button>");
@@ -67,9 +75,16 @@ $(() => {
             $(".add").on("click", function() {
                 var val = $(this).prev().val();
                 if(val !== '') {
-                    var nval = "-".repeat((50 - val.length)/2.5) + val + "-".repeat((50 - val.length)/2.5);
+                    if(val.length <= 50){
+                        var nval = "-".repeat((50 - val.length)/2.5) + val + "-".repeat((50 - val.length)/2.5);
+                    }
+                    else{
+                        var nval = val;
+                    }
                     var d = new Date();
-                    var elem = $("<li></li>").text(nval);
+                    var k = $("<p style='display:inline;'></p>").text(nval);
+                    var elem = $("<li></li>");
+                    $(elem).append(k);
                     var date = $("<i class='date'></i>").text(d);
                     $(elem).append(date);
                     $(elem).append("<button class='comp'>✓</button>");
@@ -92,6 +107,12 @@ $(() => {
         }
     });
     rep();
+    function ed() {
+        $(".list ol li p").attr("contenteditable", "true");
+        $(".list ol li p").on("keydown", () => {
+            reload();
+        });
+    }
     function rep() {
         $(".remd").on("click", function() {
             var n = $(this).parent().parent().attr("id");
@@ -140,6 +161,7 @@ $(() => {
         });
     }
     function reload() {
+        ed();
         var curlist = $("#main").html();
         localStorage.removeItem(key);
         localStorage.setItem(key, JSON.stringify(curlist));
